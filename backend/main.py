@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib 
 import numpy as np
+from fastapi.middleware.cors import CORSMiddleware
 
 app= FastAPI()
 model = joblib.load("student_model.joblib")
@@ -23,3 +24,15 @@ def get_fake_token():
         "embedUrl": "https://app.powerbi.com/view?r=your_fake_report_id",
         "reportId": "fake-report-id"
     }
+
+origins = [
+    "http://localhost:5173",  # frontend dev server
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
