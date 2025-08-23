@@ -15,7 +15,7 @@ The project is built around **SDG 4: Quality Education** — analyzing how study
 
 - 🎨 **React + TypeScript Frontend** with:
   - Prediction form (enter study & sleep hours → get predicted score)  
-  - Embedded **Power BI report** (dummy link for demo)  
+  - Embedded **Power BI report** for better visualisation 
 
 - 🌍 **SDG Alignment**: Supports **SDG 4 (Quality Education)** by exploring the relationship between study habits and academic success.
 
