@@ -1,6 +1,6 @@
-// src/App.tsx
 import { useState } from "react"
 
+// Prediction form component
 function PredictForm() {
   const [output, setOutput] = useState<any>(null)
 
@@ -31,24 +31,28 @@ function PredictForm() {
   )
 }
 
-function FakePowerBI() {
+// Real Power BI dashboard
+function PowerBIReport() {
   return (
     <iframe
-      title="Dummy Power BI Report"
-      width="600"
-      height="400"
-      src="https://app.powerbi.com/view?r=your_fake_report_id"
+      title="Student Performance Insight Dashboard"
+      width="1140"
+      height="541.25"
+      src="https://app.powerbi.com/reportEmbed?reportId=57d37989-5615-4ee4-b224-d12770e334b3&autoAuth=true&ctid=1f551aeb-7ea1-472c-9ac0-09de9bf33051&actionBarEnabled=true"
+      frameBorder="0"
+      allowFullScreen={true}
     />
   )
 }
 
+// Main App component
 export default function App() {
   return (
     <div>
       <h1>📊 Student Performance Insights</h1>
       <PredictForm />
-      <h2>Power BI Report (Dummy)</h2>
-      <FakePowerBI />
+      <h2>Power BI Report</h2>
+      <PowerBIReport />
     </div>
   )
 }
